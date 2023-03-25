@@ -1,0 +1,28 @@
+.c-section--featured {
+    padding: 0;
+    @include mq(md) {
+        padding: 0.75em 0;
+    }
+    .c-article_column-widget {
+        border-bottom: none;
+        padding: 2.5em 0;
+        width: calc(50% - 1em);
+        margin: 0 10px;
+        @include mq(md){
+            width: 100%;
+            margin: 0;
+        }
+    }
+    .c-article-section__widgets {
+        border-top: 1px solid var(--gray-300);
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -10px;
+        @include mq(md) {
+            display: block;
+            margin: 0;
+            padding: 0.5em 0;
+            border-top: none;
+        }
+    }
+}

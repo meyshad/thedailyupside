@@ -1,0 +1,100 @@
+.c-section--contactus {
+    padding: 2.5em 0 0;
+    @include mq(md) {
+        padding: 3.75em 0 0;
+    }
+}
+
+.c-contactus__title {
+    font-family: $roboto-s;
+    font-weight: 500;
+    @include font-size(30px, 1.2);
+    letter-spacing: -0.6px;
+    color: var(--gray-600);
+    margin: 0 0 16px;
+    @include mq(md) {
+        @include font-size(60px, 1.2);
+        margin: 0 0 24px;
+    }
+}
+.c-contactus__info{
+    @include mq(md){
+        padding-bottom: 415px;
+    }
+}
+.c-contactus__text {
+    font-family: $halyard;
+    font-weight: 300;
+    @include font-size(18px, 1.56);
+    letter-spacing: 0.5px;
+    text-transform: initial;
+    color: var(--gray-600);
+    margin-bottom: 40px;
+    max-width: 481px;
+    @include mq(md) {
+        margin-bottom: 24px;
+    }
+}
+
+.c-contactus__img {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    max-width: 370px;
+    img{
+        width: 100%;
+    }
+    @include mq(md) {
+        display: flex;
+    }
+}
+
+.c-contactbox__img {
+    max-width: 325px;
+    margin: 2.5em auto -2.5em;
+    img{
+        width: 100%;
+    }
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.c-confirm {
+    max-width: 378px;
+    margin: 7.25em auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    @include mq(md){
+        margin: 12.25em auto; 
+    }
+}
+
+.c-confirm__title {
+    font-family: $roboto-s;
+    font-weight: 500;
+    text-align: center;
+    @include font-size(36px, 1);
+    letter-spacing: -0.2px;
+    color: var(--gray-600);
+    margin-bottom: 16px;
+}
+
+.c-confirm__text {
+    text-align: center;
+    font-family: $halyard;
+    font-weight: 300;
+    @include font-size(20px, 1.5);
+    letter-spacing: 0.5px;
+    color: var(--gray-500);
+    margin-bottom: 32px;
+    text-transform: lowercase;
+}
+
+.c-confirm__cta {
+    width: 278px;
+    height: 40px;
+}

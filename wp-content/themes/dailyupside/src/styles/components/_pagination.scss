@@ -1,0 +1,94 @@
+.c-pagination {
+    padding: 2.5em 0;
+}
+
+.c-pagination__list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.page-numbers {
+    letter-spacing: 0.5px;
+    color: var(--gray-400);
+    font-family: $halyard;
+    font-weight: 400;
+    @include font-size(18px, 1.56);
+    width: 2.22em;
+    height: 2.22em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    &.prev {
+        flex: 1;
+        justify-content: flex-start;
+        width: auto;
+        color: var(--gray-600);
+        display: none;
+        svg {
+            margin-right: 12px;
+            transition: background 0.2s ease-in-out;
+        }
+        &.disable {
+            color: var(--gray-400);
+            display: flex;
+            cursor: not-allowed;
+            .paged & {
+                display: none;
+            }
+        }
+        .paged & {
+            display: flex;
+        }
+        span {
+            display: none;
+            @include mq(md) {
+                display: inline-flex;
+            }
+        }
+        &:not(.disable):hover {
+            svg {
+                background: var(--yellow);
+            }
+        }
+    }
+    &.next {
+        flex: 1;
+        justify-content: flex-end;
+        width: auto;
+        color: var(--gray-600);
+        svg {
+            margin-left: 12px;
+            transition: background 0.2s ease-in-out;
+        }
+        &.disable {
+            color: var(--gray-400);
+            cursor: not-allowed;
+        }
+        & + .disable {
+            display: none;
+        }
+        span {
+            display: none;
+            @include mq(md) {
+                display: inline-flex;
+            }
+        }
+        &:not(.disable):hover {
+            svg {
+                background: var(--yellow);
+            }
+        }
+    }
+    &.current {
+        color: var(--gray-600);
+    }
+    svg {
+        width: 2.22em;
+        height: 2.22em;
+        border: 1px solid var(--yellow);
+        border-radius: 100px;
+        padding: 12px;
+    }
+}

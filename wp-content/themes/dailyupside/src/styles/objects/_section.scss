@@ -1,0 +1,21 @@
+.o-section {
+  padding: 1em 0;
+  position: relative;
+
+  @include mq(lg) {
+    padding: 1em 0;
+  }
+}
+
+.o-section__wrapper {
+  padding: 0 1em;
+  margin: 0 auto;
+  max-width: 100%;
+  @include mq(md) {
+    padding: 0 2.5em;
+  }
+
+  @include mq(lg) {
+    max-width: calc(1278px - 2em);
+  }
+}

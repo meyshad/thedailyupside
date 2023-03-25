@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: $halyard;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  color: var(--gray-500);
+  background: var(--white);
+}
+.main {
+  background-color: var(--white);
+}
+
+.hidden {
+  display: none;
+}

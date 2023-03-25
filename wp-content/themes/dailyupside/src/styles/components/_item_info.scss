@@ -1,0 +1,85 @@
+.c-section--item {
+    padding: 2.5em 0;
+    @include mq(md) {
+        padding: 3em 0;
+    }
+    @include mq(lg) {
+        padding: 5em 0;
+    }
+}
+
+.c-item__title {
+    font-family: $roboto-s;
+    font-weight: 600;
+    @include font-size(34px, 1);
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    color: var(--gray-600);
+    margin-bottom: 24px;
+    @include mq(md) {
+        @include font-size(34px, 1.33333333);
+    }
+    @include mq(lg) {
+        @include font-size(40px, 0.6);
+        margin-bottom: 48px;
+    }
+}
+
+.c-item__items {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--gray-300);
+    flex-direction: column;
+    @include mq(md) {
+        flex-direction: row;
+    }
+}
+
+.c-item__item {
+    box-sizing: border-box;
+    flex: 1;
+    padding: 2em 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+    &:nth-child(2) {
+        border-top: 1px solid var(--gray-300);
+        border-bottom: 1px solid var(--gray-300);
+        @include mq(md) {
+            border-top: 0;
+            border-bottom: 0;
+            border-left: 1px solid var(--gray-300);
+            border-right: 1px solid var(--gray-300);
+        }
+    }
+    @include mq(md) {
+        padding: 2.5em 1.5em;
+        gap: 1.5em;
+    }
+}
+
+.c-item__number {
+    font-family: $halyard;
+    font-weight: 300;
+    @include font-size(20px, 1.2);
+    letter-spacing: .5px;
+    text-transform: capitalize;
+    color: var(--gray-400);
+    @include mq(md) {
+        @include font-size(24px, 1);
+    }
+    @include mq(lg) {
+        @include font-size(32px, .75);
+    }
+}
+
+.c-item__text {
+    font-family: $halyard;
+    font-weight: 300;
+    @include font-size(18px, 1.56);
+    letter-spacing: .5px;
+    color: var(--gray-500);
+    @include mq(lg) {
+        @include font-size(20px, 1.4);
+    }
+}

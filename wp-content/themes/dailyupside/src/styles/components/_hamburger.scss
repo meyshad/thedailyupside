@@ -1,0 +1,104 @@
+.c-hamburger {
+    display: block;
+    position: relative;
+    z-index: 4;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 24px;
+    @include mq(md) {
+        display: none;
+        position: unset;
+        @include ie{
+            position: relative;
+            top: auto;
+        }
+    }
+    .c-section--header--welcome-page & {
+        display: none;
+    }
+}
+
+.c-hamburger__checkbox {
+    display: block;
+    width: 24px;
+    height: 17px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+    @include mq(md) {
+        display: none;
+    }
+}
+  
+.c-hamburger__icon {
+    display: block;
+    width: 24px;
+    height: 3px;
+    margin-bottom: 4px;
+    position: relative;
+    background: var(--gray-500);
+    z-index: 1;
+    margin-left: 0;
+    transform-origin: 4.5px 2px;
+    transition: transform 0.25s cubic-bezier(0.77, 0.2, 0.05, 1),
+       background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    &:first-child {
+        transform-origin: 0% 0%;
+    }
+    &:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .t-dark & {
+        background: var(--white);
+        .js-fixed-animate &{
+            background: var(--gray-600);
+        }
+    }
+}
+
+.is-fixed {
+    overflow: hidden !important;
+    height: 100%;
+}
+  
+.c-hamburger__checkbox:checked ~ .c-hamburger__icon {
+    opacity: 1;
+    transform: rotate(45deg) translate(3px, 0px);
+    background: var(--gray-500);
+    width: 24px;
+    height: 3px;
+}
+
+.t-dark {
+    .c-hamburger__checkbox:checked ~ .c-hamburger__icon {
+        background: var(--white);
+        .js-fixed-animate &{
+            background: var(--gray-600);
+        }
+    }
+}
+
+.c-hamburger__checkbox:checked ~ .c-hamburger__icon:nth-last-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.c-hamburger__checkbox:checked ~ .c-hamburger__icon:nth-last-child(1) {
+    transform: rotate(-45deg) translate(2.5px, 1px);
+}
+
+.c-header__wrap {
+    &.is-open{
+        transform: translate(0, 0);
+        @include mq(md) {
+            transform: none;
+        }
+    }
+}

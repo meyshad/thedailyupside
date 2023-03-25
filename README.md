@@ -1,2 +1,2 @@
-# thedailyupside
-News website project on the WordPress platform
+# The Daily Upside
+

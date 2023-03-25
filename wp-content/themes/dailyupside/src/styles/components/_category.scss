@@ -1,0 +1,195 @@
+.c-section--header {
+    &.t-dark {
+        background-color: var(--gray-600);
+        border-color: var(--white);
+        &::before {
+            border-color: var(--white);
+        }
+        &::after {
+            border-color: var(--white);
+        }
+    }
+}
+
+.c-section--category-header {
+    padding: 2.65em 0;
+    background-color: var(--gray-600);
+    color: var(--white);
+}
+
+.c-category__title {
+    padding: 0;
+    margin: 0;
+    font-family: $roboto-s;
+    font-weight: 900;
+    @include font-size(36px, 1.15);
+    letter-spacing: -0.2px;
+    @include mq(md) {
+        letter-spacing: -0.006em;
+        font-weight: 700;
+    }
+    @include mq(lg) {
+        @include font-size(72px, 1);
+    }
+}
+
+.c-section--category-article {
+    padding: 1.5em 0 2.5em;
+    & + .c-section--adv {
+        .c-adv__768 {
+            a {
+                margin-bottom: 2.5em;
+            }
+        }
+    }
+    @include mq(md) {
+        padding: 2.5em 0;
+        & + .c-section--adv {
+            .c-adv__768 {
+                a {
+                    margin-bottom: 2.5em;
+                }
+            }
+        }
+    }
+    @include mq(lg) {
+        padding: 3.75em 0;
+        & + .c-section--adv {
+            .c-adv__768 {
+                a {
+                    margin-bottom: 3.75em;
+                }
+            }
+        }
+    }
+}
+
+.c-category-article {
+    background-color: var(--beige);
+    display: flex;
+    flex-direction: column;
+    @include mq(lg) {
+        flex-direction: row;
+    }
+}
+
+.c-category-article__col {
+    flex: 1 0 0;
+    @include mq(lg) {
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+.c-category-article__content {
+    padding: 1.25em;
+    .c-article__title {
+        margin-bottom: 12px;
+        @include font-size(30px, 1.2);
+        @include mq(md) {
+            @include font-size(40px, 1.15);
+        }
+        @include mq(wide) {
+            @include font-size(48px, 1.15);
+        }
+    }
+    .c-article__text {
+        margin-bottom: 0;
+        p {
+            margin: 0;
+        }
+    }
+    @include mq(md) {
+        padding: 2.65em 2.5em;
+    }
+}
+
+.c-category-article__photo {
+    img {
+        object-fit: cover;
+        flex: auto;
+        width: 100%;
+        height: 100%;
+        @include mq(lg) {
+            
+            position: absolute;
+            inset: 0;
+        }
+    }
+    a {
+        display: flex;
+    }
+    @include mq(lg) {
+        position: absolute;
+        inset: 0;
+        a {
+            height: 100%;
+        }
+    }
+}
+
+.c-section--subscribe {
+    padding: 0 0 2.875em;
+    @include mq(md) {
+        padding: 0 0 2.125em;
+    }
+    @include mq(lg) {
+        padding: 0 0 3em;
+    }
+    .c-subscribe-widget {
+        background-color: var(--beige);
+        border-color: var(--gray-600);
+    }
+    .c-subscribe-widget {
+        margin: 0;
+    }
+    .c-subscribe-widget__title {
+        @include font-size(20px, 1.2);
+        font-weight: 300;
+        @include mq(lg) {
+            @include font-size(36px, 1);
+        }
+        color: var(--gray-600);
+        strong {
+            font-weight: 500;
+            color: var(--gray-600);
+        }
+    }
+    .c-subscribe-widget__text {
+        color: var(--gray-500);
+    }
+    .subscribe-form-message {
+        color: var(--gray-600);
+    }
+}
+
+.c-article-subscribe {
+    background-color: var(--beige);
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    @include mq(md) {
+        flex-direction: row;
+    }
+    .c-btn {
+        width: 100%;
+        height: 40px;
+        @include font-size(14px, 1.14);
+        @include mq(md) {
+            width: 92px;
+            height: 31px;
+            @include font-size(14px, 1.14);
+        }
+    }
+}
+
+.c-article-subscribe__text {
+    color: var(--gray-600);
+    font-family: $halyard;
+    font-weight: 400;
+    @include font-size(16px, 1);
+    letter-spacing: -0.01em;
+}

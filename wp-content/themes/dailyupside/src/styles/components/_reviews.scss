@@ -1,0 +1,115 @@
+.c-section--reviews {
+    padding: 0;
+    margin-bottom: 2.5em;
+    @include mq(md) {
+        margin-bottom: 3em;
+    }
+    @include mq(lg) {
+        margin-bottom: 5em;
+    }
+}
+
+.c-reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-bottom: 2.5em;
+    @include mq(md) {
+        margin-bottom: 3em;
+    }
+    @include mq(lg) {
+        gap: 15.3125em;
+        flex-direction: row;
+        margin-bottom: 5em;
+    }
+}
+
+.c-reviews__title {
+    font-family: $roboto-s;
+    font-weight: 600;
+    @include font-size(24px, 1);
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    color: var(--gray-600);
+    @include mq(md) {
+        @include font-size(30px, 1.33333333);
+    }
+    @include mq(lg) {
+        @include font-size(40px, 0.6);
+    }
+}
+
+.c-reviews__blockquote {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-between;
+    align-items: center;
+    @include mq(md) {
+        gap: 2.5em 3%;
+    }
+    @include mq(lg) {
+        gap: 3.75em 3%;
+    }
+}
+
+.c-blockquote {
+    flex: 100%;
+    text-align: center;
+    @include mq(md) {
+        flex: 1 1 47%;
+    }
+    &::before {
+        content: url(../images/quotation.svg);
+        width: 47.04px;
+        height: 28.95px;
+        display: block;
+        margin-bottom: 13px;
+    }
+}
+
+.c-blockquote__text {
+    text-align: center;
+    display: inline;
+    padding: 4px;
+    box-shadow: 0.25em 0 0 var(--beige), -0.25em 0 0 var(--beige);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    margin: 0;
+    background-color: var(--beige);
+    color: var(--gray-500);
+    font-family: $halyard;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @include font-size(16px, 2);
+    @include mq(lg) {
+        @include font-size(18px, 2);
+    }
+}
+
+.c-blockquote__name {
+    font-family: $halyard;
+    font-weight: 400;
+    @include font-size(16px, 1.5);
+    letter-spacing: .5px;
+    text-transform: capitalize;
+    color: var(--gray-600);
+    padding-top: .785em;
+    text-align: left;
+    @include mq(lg) {
+        padding-top: 1.5em;
+    }
+}
+
+.c-reviews__btn {
+    width: 170px;
+    height: 40px;
+    @include font-size(14px, 1.714);
+    @include mq(md) {
+        width: 210px;
+        height: 48px;
+        @include font-size(16px, 1.714);
+        margin: 0 auto;
+    }
+}

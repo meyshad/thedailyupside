@@ -1,0 +1,105 @@
+.c-section--footer {
+    padding: 3.75em 0;
+    background-color: var(--gray-600);
+}
+
+.c-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 44px;
+    @include mq(lg) {
+        padding-bottom: 40px;
+        flex-direction: row;
+    }
+}
+
+.c-footer__col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @include mq(md) {
+        gap: 28px;
+    }
+    .c-link--logo {
+        width: 150px;
+        @include mq(md) {
+            width: 180px;
+        }
+    }
+}
+
+.c-footer__social-link {
+    .c-social-link {
+        gap: 1.5em;
+        li {
+            a {
+                border-color: transparent;
+                transition: background 0.2s ease-in-out;
+                path {
+                    transition: fill 0.2s ease-in-out;
+                }
+                @include mq(lg) {
+                    border-color: var(--white);
+                }
+                &:hover {
+                    background: var(--white);
+                    path {
+                        fill: var(--gray-600);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.c-footer__warp {
+    display: flex;
+    flex-wrap: wrap;
+    lex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    @include mq(md) {
+        gap: 7em;
+    }
+}
+
+.c-footer__widget {
+    display: flex;
+    flex-direction: column;
+    gap: 0.56em;
+    @include mq(md) {
+        gap: 0.5em;
+    }
+}
+
+.c-footer__title {
+    color: var(--white);
+    font-family: $roboto-s;
+    font-weight: 500;
+    @include font-size(20px, 0.9);
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.2px;
+    @include mq(md) {
+        @include font-size(18px, 1);
+    }
+}
+
+.c-copyright {
+    display: none;
+    @include mq(lg) {
+        display: flex;
+        justify-content: center;
+        color: var(--white);
+        font-family: $halyard;
+        font-weight: 300;
+        @include font-size(16px, 1.5);
+        letter-spacing: 0.5px;
+        text-transform: capitalize;
+        border-top: 1px solid var(--white);
+        padding-top: 40px;
+    }
+}
